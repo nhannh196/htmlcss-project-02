@@ -17,7 +17,7 @@ a {
 }
 
 /* Common */
-.content {
+.main-content {
     width: 1170px;
     max-width: calc(100% - 50px);
     margin-left: auto;
@@ -37,12 +37,17 @@ a {
     padding: 12px 24px;
 }
 
+.row {
+    display: flex;
+}
+
 /* ------------------------------ Header ------------------------------ */
 .header {
     background-color: #fffcf4;
     padding-top: 24px;
     position: sticky;
     top: -24px;
+    z-index: 1;
 }
 
 .header .body {
@@ -82,17 +87,16 @@ a {
     font-size: 1.6rem;
     font-style: normal;
     line-height: 1.75;
-    text-shadow: 1px 0px 0px  currentColor;
+    text-shadow: 1px 0px 0px currentColor;
 }
 
-
-.nav-item a.active::after{
+.nav-item a.active::after {
     position: absolute;
     content: "";
     display: inline-block;
     width: 12px;
     height: 2px;
-   background-color: #171100;
+    background-color: #171100;
     border-radius: 1px;
     left: 21px;
     bottom: 26px;
@@ -108,5 +112,170 @@ a {
 }
 
 .btn.sign-up:hover {
-    opacity: 0.9;
+    opacity: 0.7;
+}
+
+/* ------------------------------ Hero ------------------------------ */
+.hero {
+    padding: 52px 0 65px;
+    background-color: #fffcf4;
+}
+
+.hero .hero-body {
+    display: flex;
+}
+
+.hero .hero-img .image-wrap {
+    position: relative;
+}
+
+.hero .hero-img .image {
+    display: inline-block;
+    width: 470px;
+    height: 685px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.hero .courses {
+    position: absolute;
+    display: flex;
+    width: 270px;
+    padding: 24px 0 24px 24px;
+    left: 300px;
+    bottom: 48px;
+    flex-direction: column;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+}
+
+.hero .courses .row:not(:first-child) {
+    margin-top: 14px;
+}
+
+.hero .courses .row {
+    gap: 14px;
+}
+
+.course-info .desc {
+    color: #5f5b53;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.85714; /* 185.714% */
+}
+
+.course-info .title {
+    color: #171100;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.66667; /* 166.667% */
+}
+
+.hero .hero-info {
+    width: 470px;
+    margin-left: 230px;
+    margin-top: 64px;
+}
+
+.hero-info .title {
+    color: #171100;
+    font-family: Sen;
+    font-size: 5.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.17241; /* 117.241% */
+    letter-spacing: -1.16px;
+}
+
+.hero-info p.desc {
+    margin-top: 22px;
+    color: #5f5b53;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 166.667% */
+}
+
+.hero .actions {
+    display: flex;
+    gap: 28px;
+    margin-top: 38px;
+}
+
+.hero .actions .btn {
+    padding: 17px 34px;
+    border-radius: 32px;
+    background: #ffb900;
+    color: #fff;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.66667; /* 166.667% */
+}
+
+.hero .actions .play-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+}
+
+.play-video .img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.1);
+}
+
+.play-video .desc {
+    color: #171100;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.6667; /* 166.667% */
+}
+
+.hero .stats {
+    margin-top: 48px;
+}
+
+.hero .stats .row {
+    gap: 29px;
+    margin-top: 8px;
+}
+
+.hero .stats-title {
+    color: #5f5b53;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.66667; /* 166.667% */
+}
+
+.stats .quantity {
+    display: inline-block;
+    color: #171100;
+    font-family: Sen;
+    font-size: 4.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.22727; /* 122.727% */
+}
+
+.stats .quantity-desc {
+    display: inline-block;
+    margin-left: 10px;
+    color: #5f5b53;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.66667;
 }
