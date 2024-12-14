@@ -341,15 +341,15 @@ a {
     height: 40px;
     border-radius: 50%;
     cursor: pointer;
-}
-
-.popular-action .icon.left {
     border: 1px solid #ffb900;
+    color: #FFB900;
 }
 
-.popular-action .icon.right {
-    background-color: #ffb900;
+.popular-action .icon:hover{
+    background-color: #FFB900;
+    color: white;
 }
+
 
 .popular .popular-body {
     margin-top: 55px;
