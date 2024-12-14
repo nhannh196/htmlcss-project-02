@@ -47,9 +47,13 @@ a {
 
 .line-clamp {
     display: -webkit-box;
-    -webkit-line-clamp: var(--line-clamp, 2);
+    -webkit-line-clamp: var(--line-clamp, 1);
     -webkit-box-orient: vertical;
     overflow: hidden;
+}
+
+.line-clamp.line-2 {
+    --line-clamp: 2;
 }
 
 /* ------------------------------ Header ------------------------------ */
@@ -323,6 +327,7 @@ a {
     font-weight: 700;
     line-height: 1.26316; /* 126.316% */
     letter-spacing: -0.76px;
+    padding-right: 20px;
 }
 
 .popular-info .desc {
@@ -393,14 +398,16 @@ a {
 .popular-item .body .row {
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
 }
 
-.popular-item .body .title {
+.popular-item .body .title a {
     color: #171100;
     font-size: 1.8rem;
     font-style: normal;
     font-weight: 600;
     line-height: 1.66667; /* 166.667% */
+    word-break: break-all;
 }
 
 .popular-item .body .rating.row {
@@ -449,4 +456,69 @@ a {
 .popular-item .body .btn:hover {
     background-color: var(--primary-color);
     cursor: pointer;
+}
+
+/* ------------------------------ Popular ------------------------------ */
+.feedback {
+    padding: 96px 0;
+    background-color: #2e2100;
+}
+
+.feedback .user {
+    width: 34%;
+}
+.feedback .user-feedback{
+    width: 66%;
+}
+
+.feedback .user .avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.feedback .user .name {
+    margin-top: 18px;
+    color: #f7f7f7;
+    font-family: Sen;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.41667; /* 141.667% */
+}
+
+.feedback .user .position {
+    margin-top: 4px;
+    color: #bfbcb2;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.85714; /* 185.714% */
+}
+
+.feedback .user .quantities {
+    margin-top: 28px;
+    display: flex;
+    gap: 6px;
+}
+
+.user .quantities .qty-item {
+    width: 6px;
+    height: 6px;
+    border-radius: 6px;
+    background: #634700;
+}
+
+.user .quantities .active {
+    background-color: #ffb900;
+}
+
+.feedback .user-feedback .content-feedback {
+    margin-left: 30px;
+    color: #FFF;
+    font-size: 2.6rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.53846; /* 153.846% */
 }
