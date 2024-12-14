@@ -9,7 +9,7 @@ html {
 body {
     font-size: 1.6rem;
     font-family: "Poppins", "san-serif";
-    height: 2000px;
+    /* min-height: 2000px; */
 }
 
 a {
@@ -39,6 +39,13 @@ a {
 
 .row {
     display: flex;
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 2);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 /* ------------------------------ Header ------------------------------ */
@@ -127,10 +134,11 @@ a {
 
 .hero .hero-img .image-wrap {
     position: relative;
+    display: block;
 }
 
 .hero .hero-img .image {
-    display: inline-block;
+    display: block;
     width: 470px;
     height: 685px;
     object-fit: cover;
@@ -144,18 +152,19 @@ a {
     padding: 24px 0 24px 24px;
     left: 300px;
     bottom: 48px;
+    gap: 22px;
     flex-direction: column;
     border-radius: 12px;
     background: #fff;
     box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
 }
 
-.hero .courses .row:not(:first-child) {
+/* .hero .courses .row:not(:first-child) {
     margin-top: 14px;
-}
+} */
 
 .hero .courses .row {
-    gap: 14px;
+    gap: 16px;
 }
 
 .course-info .desc {
@@ -222,6 +231,7 @@ a {
     justify-content: center;
     align-items: center;
     gap: 14px;
+    cursor: pointer;
 }
 
 .play-video .img {
@@ -232,7 +242,7 @@ a {
     height: 40px;
     background-color: #ffffff;
     border-radius: 50%;
-    box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.07);
 }
 
 .play-video .desc {
@@ -278,4 +288,156 @@ a {
     font-style: normal;
     font-weight: 400;
     line-height: 1.66667;
+}
+
+/* ------------------------------ Popular ------------------------------ */
+.popular {
+    padding: 200px 0;
+}
+
+.popular .popular-main{
+    display: inline-block;
+}
+
+.popular .popular-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popular-header .popular-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.popular-info .title {
+    color: #171100;
+    font-family: Sen;
+    font-size: 3.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.26316; /* 126.316% */
+    letter-spacing: -0.76px;
+}
+
+.popular-info .desc {
+    color: #5f5b53;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.66667; /* 166.667% */
+}
+
+.popular-action {
+    display: flex;
+    gap: 18px;
+}
+.popular-action .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.popular-action .icon.left {
+    border: 1px solid #ffb900;
+}
+
+.popular-action .icon.right {
+    background-color: #ffb900;
+}
+
+.popular .popular-body {
+    margin-top: 55px;
+    display: flex;
+    gap: 30px;
+    /* align-content: stretch; */
+}
+
+.popular-body .popular-item {
+    flex:1;
+    width: 370px;
+    min-height: 466px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.05);
+}
+
+.popular-item .image {
+    display: block;
+    width: 100%;
+    height: 278px;
+    border-radius: 12px 12px 0px 0px;
+    object-fit: cover;
+}
+
+.popular-item .body {
+    padding: 16px 22px 22px;
+    /* min-height: calc(466px - 278px); */
+    border-radius: 12px;
+}
+
+.popular-item .body .row {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popular-item .body .title {
+    color: #171100;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.66667; /* 166.667% */
+}
+
+.popular-item .body .rating.row {
+    align-items: center;
+    gap: 6px;
+}
+
+.popular-item .body .rate {
+    color: #fea31b;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.75; /* 175% */
+}
+
+.popular-item .body .desc {
+    margin-top: 6px;
+    color: #5f5b53;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.85714; /* 185.714% */
+    word-break: break-all;
+}
+
+.popular-item .body .bottom {
+    margin-top: 12px;
+}
+
+.popular-item .body .price {
+    color: #171100;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.66667; /* 166.667% */
+}
+
+.popular-item .body .btn {
+    color: #fff;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.85714; /* 185.714% */
+}
+
+.popular-item .body .btn:hover{
+    background-color: #FFB900;
+    cursor: pointer;
 }
