@@ -56,6 +56,10 @@ a {
     --line-clamp: 2;
 }
 
+.line-clamp.line-3{
+    --line-clamp: 3;
+}
+
 /* ------------------------------ Header ------------------------------ */
 .header {
     background-color: #fffcf4;
@@ -464,25 +468,24 @@ a {
     background-color: #2e2100;
 }
 
-
-.feedback .feedback-list{
+.feedback .feedback-list {
     display: flex;
     overflow: hidden;
 }
 
-.feedback .feedback-item{
+.feedback .feedback-item {
     display: flex;
     flex-shrink: 0;
     width: 100%;
     justify-content: space-between;
     transform: translateX(-100%);
-    transition: all ease .3s;
+    transition: all ease 0.3s;
 }
 
 .feedback .user {
     width: 25%;
 }
-.feedback .user-feedback{
+.feedback .user-feedback {
     width: 66%;
 }
 
@@ -531,9 +534,102 @@ a {
 
 .feedback .user-feedback .content-feedback {
     margin-left: 30px;
-    color: #FFF;
+    color: #fff;
     font-size: 2.6rem;
     font-style: italic;
     font-weight: 400;
     line-height: 1.53846; /* 153.846% */
+}
+
+/* ------------------------------ Features ------------------------------ */
+.features {
+    padding: 200px 0;
+}
+
+.features .features-content {
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+}
+
+.features .row {
+    display: flex;
+    min-height: 438px;
+    gap: 130px;
+}
+
+/* .features .row .left-content,
+.features .row .right-content{
+    flex: 1;
+} */
+
+.features .row.top .left-content {
+    display: flex;
+    gap: 30px;
+}
+
+.row.top .left-content img {
+    width: 270px;
+    height: 405px;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+.row.top .left-content .feature-img.left {
+    margin-top: auto;
+}
+
+.row.top .right-content .content,
+.row.bottom .left-content .content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-content: center;
+}
+
+.features .row .title {
+    color: #171100;
+    font-family: Sen;
+    font-size: 3.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.26316; /* 126.316% */
+    letter-spacing: -0.76px;
+}
+
+.features .row .desc,
+.features .row .report {
+    color: #5f5b53;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.75; /* 175% */
+}
+
+.features .btn {
+    display: inline-block;
+    margin-top: 32px;
+    color: #fff;
+    text-align: center;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.75; /* 175% */
+    border-radius: 26px;
+    background: #ffb900;
+    padding: 11px 37px;
+}
+
+.row.bottom .right-content img{
+    width:470px;
+    height: 440px;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+.features .top .right-content,
+.features .bottom .left-content{
+    align-content: center;
+    margin: 50px 0;
+    /* padding: 58px; */
 }
