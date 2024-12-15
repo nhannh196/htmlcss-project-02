@@ -458,14 +458,29 @@ a {
     cursor: pointer;
 }
 
-/* ------------------------------ Popular ------------------------------ */
+/* ------------------------------ Feedback ------------------------------ */
 .feedback {
     padding: 96px 0;
     background-color: #2e2100;
 }
 
+
+.feedback .feedback-list{
+    display: flex;
+    overflow: hidden;
+}
+
+.feedback .feedback-item{
+    display: flex;
+    flex-shrink: 0;
+    width: 100%;
+    justify-content: space-between;
+    transform: translateX(-100%);
+    transition: all ease .3s;
+}
+
 .feedback .user {
-    width: 34%;
+    width: 25%;
 }
 .feedback .user-feedback{
     width: 66%;
