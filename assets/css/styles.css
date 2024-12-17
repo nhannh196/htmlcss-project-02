@@ -821,16 +821,23 @@ a {
 
 .footer-content .row.right {
     margin-left: 145px;
-    /* justify-content: space-between; */
+    /* gap: 130px; */
+
 }
+/* .footer-content .row.right div{
+    flex: 1 0 20%;
+}
+.footer-content .row.right div:nth-of-type(3){
+    flex-grow: 4;
+} */
+
 .footer-content .company {
-    /* margin-left: 145px; */
-    width: 20%;
+    width: 19%;
 }
 
 .footer-content .support {
     margin-left: 130px;
-    width: 20.1%;
+    width: 22%;
 }
 
 .footer-content .address {
@@ -893,7 +900,7 @@ a {
 }
 
 .footer-content .copyright {
-    margin-top: 65px;
+    margin-top: 67px;
     color: #807d74;
     text-align: center;
     font-size: 1.4rem;
